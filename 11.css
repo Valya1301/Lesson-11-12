@@ -1,0 +1,233 @@
+/* Общие стили футера */
+.footer {
+    background-color: #ffffff; /* Цвет фона */
+    padding: 40px 20px; /* Внутренние отступы */
+    font-family: Arial, sans-serif; /* Шрифт */
+    position: relative; /* Относительное позиционирование для футера */
+}
+
+/* Верхняя линия футера */
+.footer__top-line {
+    border-top: 1px solid #ffffff; /* Цвет и стиль линии */
+    width: 100%; /* Ширина линии */
+    position: absolute; /* Позиционирование */
+    top: 25px; /* Линия в самом верху */
+    left: 0;
+}
+
+/* Верхняя часть футера */
+.footer__top {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    padding-top: 20px; /* Отступ от верхней линии */
+    margin-bottom: 20px;
+    position: relative; /* Относительное позиционирование для футера */
+}
+
+/* Контент верхней части футера */
+.footer__top-content {
+    display: flex;
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+    width: 100%;
+}
+
+/* Логотип */
+.footer__logo {
+    flex-shrink: 0; /* Не уменьшать размер логотипа */
+    margin-right: 100px; /* Увеличиваем отступ справа для отделения от навигационных блоков */
+}
+
+.footer__logo-link {
+    font-size: 35px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Навигационные колонки */
+.footer__nav {
+    display: flex;
+    gap: 50px; /* Расстояние между колонками */
+    flex: 1; /* Позволяет занимать доступное пространство */
+    align-items: flex-start; /* Выравнивание по верхнему краю */
+}
+
+.footer__nav-column {
+    width: 50%; /* Ширина каждой колонки по умолчанию */
+    max-width: 400px; /* Максимальная ширина колонки */
+}
+
+.footer__nav-column--partners {
+    margin-left: 500px;/* Здесь можно оставить margin-left, если нужно добавить отступ между колонками */
+}
+
+.footer__nav-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Удаление всех отступов */
+}
+
+.footer__nav-item {
+    margin-bottom: 8px;
+}
+
+.footer__nav-link {
+    text-decoration: none;
+    color: #878585;
+    transition: color 0.3s ease;
+}
+
+.footer__nav-link:hover {
+    color: #555;
+}
+
+/* Линия перед нижним блоком */
+.footer__separator-top {
+    border-top: 1px solid #ddd; /* Цвет и стиль линии */
+    margin: 20px 0; /* Отступы сверху и снизу */
+    width: 100%; /* Ширина линии */
+}
+
+/* Нижняя часть футера */
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+
+.footer__bottom-left {
+    display: flex;
+    align-items: center;
+}
+
+.footer__bottom-link {
+    text-decoration: none;
+    color: #878585;
+    margin-right: 10px;
+}
+
+.footer__bottom-divider {
+    margin-right: 10px;
+    color: #878585;
+}
+
+.footer__bottom-right {
+    text-align: right;
+}
+
+.footer__bottom-copyright {
+    color: #333;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .footer__top-content {
+        flex-direction: column; /* Размещаем логотип и навигацию в колонку */
+        align-items: flex-start; /* Логотип выравнен по левому краю */
+    }
+
+    .footer__logo {
+        margin-right: 0; /* Убираем отступ справа для логотипа */
+        margin-bottom: 20px; /* Отступ снизу для логотипа */
+    }
+
+    .footer__nav {
+        display: flex;
+        gap: 30px; /* Уменьшаем расстояние между колонками */
+        flex-direction: row; /* Колонки остаются в строке */
+        flex-wrap: wrap; /* Разрешаем перенос колонок на следующую строку при необходимости */
+    }
+
+    .footer__nav-column {
+        width: 45%; /* Устанавливаем ширину колонок */
+        margin: 0; /* Убираем отступы */
+    }
+
+    .footer__nav-column--partners {
+        margin-left: 0; /* Убираем отступ слева для "Наши партнеры" */
+    }
+
+    .footer__nav-column--help {
+        margin-right: 0; /* Убираем отступ справа для "Помощь" */
+    }
+}
+
+/* Медиа запросы для планшетов (от 768px до 1024px) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .footer__top-content {
+        flex-direction: column; /* Размещаем логотип и навигацию в колонку */
+        align-items: flex-start; /* Логотип выравнен по левому краю */
+    }
+
+    .footer__logo {
+        margin-right: 0; /* Убираем отступ справа для логотипа */
+        margin-bottom: 20px; /* Отступ снизу для логотипа */
+    }
+
+    .footer__nav {
+        display: flex;
+        gap: 20px; /* Расстояние между колонками */
+        flex-direction: row; /* Колонки остаются в строке */
+        flex-wrap: wrap; /* Разрешаем перенос колонок на следующую строку при необходимости */
+    }
+
+    .footer__nav-column {
+        width: 45%; /* Устанавливаем ширину колонок */
+        margin: 0; /* Убираем отступы */
+    }
+
+    .footer__nav-column--partners {
+        margin-left: 0; /* Убираем отступ слева для "Наши партнеры" */
+    }
+
+    .footer__nav-column--help {
+        margin-right: 0; /* Убираем отступ справа для "Помощь" */
+    }
+}
+ 
+@media (max-width: 767px) {
+    .footer__top-content {
+        flex-direction: column; /* Вертикальное размещение элементов */
+        align-items: center; /* Центрирование по горизонтали */
+    }
+
+    .footer__logo {
+        margin-right: 0; /* Убираем отступ справа для логотипа */
+        margin-bottom: 20px; /* Отступ снизу для логотипа */
+    }
+
+    .footer__nav {
+        display: flex;
+        flex-direction: column; /* Колонки становятся вертикальными */
+        gap: 20px; /* Расстояние между колонками */
+        align-items: center; /* Центрирование колонок */
+    }
+
+    .footer__nav-column {
+        width: 100%; /* Колонки занимают всю ширину родителя */
+        max-width: none; /* Убираем ограничение по максимальной ширине */
+        margin: 0; /* Убираем отступы */
+    }
+
+    .footer__bottom {
+        flex-direction: column; /* Вертикальное размещение элементов нижней части */
+        align-items: center; /* Центрирование по горизонтали */
+    }
+
+    .footer__bottom-left {
+        flex-direction: column; /* Вертикальное размещение элементов нижней части */
+        align-items: center; /* Центрирование по горизонтали */
+        margin-bottom: 20px; /* Отступ снизу */
+    }
+
+    .footer__bottom-right {
+        text-align: center; /* Центрирование текста */
+    }
+}
